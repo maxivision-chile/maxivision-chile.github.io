@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maxivision – Seguridad · Web · Automatización</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favprimario_h.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favprimario_h.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══ NAV ══ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="#hero" class="nav-logo">
+        <img src="primario_h.png" alt="Maxivision" class="logo-light" />
+        <img src="secundario_h.png" alt="Maxivision" class="logo-dark" />
+      </a>
+      <nav class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#contacto" class="btn btn-nav">Cotizar ahora</a>
+      <button class="nav-burger" aria-label="Menú" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+      <a href="#clientes" onclick="toggleMenu()">Clientes</a>
+      <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
+      <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Tecnología de última generación
+      </div>
+      <h1>
+        Protegemos,<br />
+        <span class="text-gradient">conectamos</span><br />
+        y automatizamos.
+      </h1>
+      <p>Instalación de cámaras de seguridad, desarrollo web profesional y automatización de procesos para empresas que exigen resultados reales.</p>
+      <div class="hero-cta">
+        <a href="#servicios" class="btn btn-glow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Ver servicios
+        </a>
+        <a href="#contacto" class="btn btn-ghost">Hablar con un asesor</a>
+      </div>
+      <div class="hero-trust">
+        <span>Confiado por</span>
+        <div class="trust-logos">
+          <span>Fluidra</span>
+          <span class="sep">·</span>
+          <span>BCI</span>
+          <span class="sep">·</span>
+          <span>Citrumax</span>
+          <span class="sep">·</span>
+          <span>Aquaevo</span>
+          <span class="sep">·</span>
+          <span>Crubvet</span>
+          <span class="sep">·</span>
+          <span>CUT AR STUDIO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ SERVICIOS ══ -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Lo que hacemos</span>
+        <h2 class="section-title">Nuestros <span class="text-gradient">Servicios</span></h2>
+        <p class="section-sub">Soluciones integrales para proteger y hacer crecer tu empresa.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="card-glow"></div>
+          <div class="service-num">01</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="10" stroke="currentColor" stroke-width="2.5"/><circle cx="28" cy="28" r="18" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 4"/><path d="M28 4v8M28 44v8M4 28h8M44 28h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="28" cy="28" r="4" fill="currentColor"/></svg>
+          </div>
+          <h3>Cámaras de Seguridad</h3>
+          <p>Diseño e instalación de sistemas CCTV e IP de alta definición. Monitoreo remoto, alertas inteligentes y grabación en la nube 24/7.</p>
+          <div class="service-tags">
+            <span>CCTV</span><span>IP HD</span><span>Remoto</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="card-glow"></div>
+          <div class="service-num">02</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 56 56" fill="none"><rect x="6" y="10" width="44" height="30" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M19 48h18M28 40v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M14 22h6M26 22h6M14 30h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M36 19l5 5-5 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Desarrollo Web</h3>
+          <p>Sitios y aplicaciones web modernas, veloces y optimizadas para conversión. Desde landing pages hasta plataformas empresariales a medida.</p>
+          <div class="service-tags">
+            <span>UX/UI</span><span>React</span><span>SEO</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="card-glow"></div>
+          <div class="service-num">03</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 56 56" fill="none"><path d="M8 28C8 17.5 16.5 9 27 9s19 8.5 19 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M16 38l-5 10h34l-5-10" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="28" cy="28" r="6" stroke="currentColor" stroke-width="2.5"/><path d="M40 16l-3 3M19 37l-3 3M16 16l3 3M37 37l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Automatización</h3>
+          <p>Flujos automáticos, integraciones y soluciones RPA que eliminan tareas repetitivas, reducen errores y escalan tu operación sin fricciones.</p>
+          <div class="service-tags">
+            <span>RPA</span><span>API</span><span>Workflows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ STATS ══ -->
+  <section class="stats-section">
+    <div class="stats-bg"></div>
+    <div class="container stats-grid">
+      <div class="stat reveal">
+        <span class="stat-num" data-target="20">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Proyectos entregados</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num" data-target="6">0</span>
+        <span class="stat-label">Clientes de referencia</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+        <span class="stat-label">Satisfacción garantizada</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num stat-txt">24/7</span>
+        <span class="stat-label">Soporte disponible</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CLIENTES ══ -->
+  <section class="section section-alt" id="clientes">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Empresas que nos eligieron</span>
+        <h2 class="section-title">Nuestros <span class="text-gradient">Clientes</span></h2>
+        <p class="section-sub">Organizaciones líderes en sus industrias que confían en Maxivision.</p>
+      </div>
+
+      <div class="clients-grid">
+
+        <!-- Fluidra -->
+        <div class="client-card reveal">
+          <div class="client-logo-wrap">
+            <img src="logo-fluidra.png" alt="Fluidra" />
+          </div>
+          <span class="client-sector">Piscinas &amp; Acuática</span>
+        </div>
+
+        <!-- BCI -->
+        <div class="client-card reveal">
+          <div class="client-logo-wrap">
+            <img src="logo-bci.png" alt="BCI Leasing" />
+          </div>
+          <span class="client-sector">Banca &amp; Finanzas</span>
+        </div>
+
+        <!-- Crubvet -->
+        <div class="client-card reveal">
+          <div class="client-logo-wrap client-logo-square">
+            <img src="logo-crubvet.png" alt="Crubvet Centro Veterinario" />
+          </div>
+          <span class="client-sector">Salud Animal</span>
+        </div>
+
+        <!-- Cut AR Studio -->
+        <div class="client-card reveal">
+          <div class="client-logo-wrap">
+            <img src="logo-cutarstudio.png" alt="CUT AR STUDIO" />
+          </div>
+          <span class="client-sector">Diseño &amp; Creatividad</span>
+        </div>
+
+        <!-- Citrumax -->
+        <div class="client-card reveal">
+          <div class="client-logo-wrap">
+            <svg viewBox="0 0 200 56" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="200" height="56" rx="14" fill="#BFEC5A"/>
+              <text x="100" y="38" font-family="'Inter',Arial,sans-serif" font-size="26" font-weight="800" fill="#111" text-anchor="middle">Citrumax</text>
+            </svg>
+          </div>
+          <span class="client-sector">Agroindustria</span>
+        </div>
+
+        <!-- Aquaevo -->
+        <div class="client-card reveal">
+          <div class="client-logo-wrap">
+            <img src="logo-aquaevo.png" alt="Aquaevo" />
+          </div>
+          <span class="client-sector">Tecnología del Agua</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ NOSOTROS ══ -->
+  <section class="section" id="nosotros">
+    <div class="container why-grid">
+      <div class="why-visual reveal">
+        <div class="why-img-ring">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="why-img-box">
+            <img src="secundario_z.JPEG" alt="Maxivision" />
+          </div>
+        </div>
+      </div>
+      <div class="why-text reveal">
+        <span class="eyebrow">¿Por qué Maxivision?</span>
+        <h2>Tecnología precisa,<br /><span class="text-gradient">resultados concretos.</span></h2>
+        <p>Combinamos experiencia técnica profunda con atención personalizada para que cada solución sea exactamente lo que tu empresa necesita, sin costos ocultos ni promesas vacías.</p>
+        <ul class="why-list">
+          <li><span class="check-icon">✓</span> Soluciones integrales bajo un mismo proveedor</li>
+          <li><span class="check-icon">✓</span> Tecnología de última generación certificada</li>
+          <li><span class="check-icon">✓</span> Soporte técnico post-implementación incluido</li>
+          <li><span class="check-icon">✓</span> Presupuesto sin cargo ni compromiso</li>
+          <li><span class="check-icon">✓</span> Experiencia en industria, comercio y banca</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary">Solicitar presupuesto gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACTO ══ -->
+  <section class="section contact-section" id="contacto">
+    <div class="contact-bg"></div>
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow light">Estamos disponibles</span>
+        <h2>¿Tienes un proyecto?<br /><span class="text-gradient-light">Hablemos.</span></h2>
+        <p>Completa el formulario o escribenos directamente. Te respondemos en menos de 24 hrs hábiles.</p>
+
+        <div class="contact-links">
+          <a href="mailto:maxivision.chile@gmail.com" class="contact-link-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            </div>
+            <div>
+              <span class="cl-label">Email</span>
+              <span class="cl-value">maxivision.chile@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://wa.me/56986262488" class="contact-link-item" target="_blank">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <div>
+              <span class="cl-label">WhatsApp</span>
+              <span class="cl-value">Escribenos ahora</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-logo">
+          <img src="secundario_h.png" alt="Maxivision" />
+        </div>
+      </div>
+
+      <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="tu@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Empresa</label>
+          <input type="text" placeholder="Nombre de tu empresa" />
+        </div>
+        <div class="form-group">
+          <label>Servicio de interés</label>
+          <select>
+            <option value="" disabled selected>Seleccioná un servicio</option>
+            <option>Cámaras de Seguridad</option>
+            <option>Desarrollo Web</option>
+            <option>Automatización de Procesos</option>
+            <option>Solución integral</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea placeholder="Contanos sobre tu proyecto..." rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-glow btn-full">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Enviar mensaje
+        </button>
+        <p class="form-success" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="secundario_h.png" alt="Maxivision" />
+        <p>Seguridad · Tecnología · Automatización</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer-copy">© 2025 Maxivision. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
