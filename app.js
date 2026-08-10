@@ -128,18 +128,41 @@ const counterObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 statEls.forEach(el => counterObs.observe(el));
 
-/* ── Contact form ── */
-function handleSubmit(e) {
+/* ── Contact form (Web3Forms) ── */
+const SEND_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar mensaje';
+
+async function handleSubmit(e) {
   e.preventDefault();
+  const form = e.target;
   const note = document.getElementById('formNote');
-  const btn  = e.target.querySelector('button[type=submit]');
+  const btn  = form.querySelector('button[type=submit]');
+
   btn.disabled = true;
   btn.textContent = 'Enviando…';
-  setTimeout(() => {
-    note.textContent = '✓ Mensaje enviado. Te contactaremos muy pronto.';
-    e.target.reset();
+  note.style.color = '';
+  note.textContent = '';
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form),
+    });
+    const data = await res.json();
+
+    if (res.ok && data.success) {
+      note.style.color = 'rgba(58,180,242,.9)';
+      note.textContent = '✓ Mensaje enviado. Te contactaremos muy pronto.';
+      form.reset();
+    } else {
+      throw new Error(data.message || 'Error al enviar');
+    }
+  } catch (err) {
+    note.style.color = '#ff8a8a';
+    note.textContent = '✕ No se pudo enviar. Escríbenos a maxivision.chile@gmail.com o por WhatsApp.';
+  } finally {
     btn.disabled = false;
-    btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar mensaje';
-    setTimeout(() => { note.textContent = ''; }, 6000);
-  }, 1000);
+    btn.innerHTML = SEND_ICON;
+    setTimeout(() => { note.textContent = ''; note.style.color = ''; }, 8000);
+  }
 }
