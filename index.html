@@ -17,7 +17,7 @@
   <link rel="icon" type="image/png" sizes="128x128" href="favicon.png?v=2" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=2" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=10" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -59,7 +59,6 @@
 
   <!-- ══ HERO ══ -->
   <section class="hero" id="hero">
-    <div class="hero-grid-lines" aria-hidden="true"></div>
 
     <div class="container hero-content" id="heroContent">
       <div class="hero-badge">
@@ -79,6 +78,23 @@
         </a>
         <a href="#contacto" class="btn btn-ghost">Hablar con un asesor</a>
       </div>
+    </div>
+
+    <!-- Instalaciones reales flotando a la derecha -->
+    <div class="hero-visual">
+      <figure class="hv-monitor" data-parallax="0.05">
+        <div class="hv-float">
+          <div class="monitor-bar"><span class="rec-dot"></span>Monitoreo · 4 cámaras</div>
+          <img src="seg-monitoreo-vet.jpg" alt="Pantalla de monitoreo con cuatro cámaras instaladas por Maxivision en una clínica veterinaria" width="1066" height="612" />
+          <figcaption class="hv-caption">Instalaciones reales en clínicas y residencias</figcaption>
+        </div>
+      </figure>
+      <figure class="hv-dome" data-parallax="0.12">
+        <div class="hv-float">
+          <img src="seg-domo-1.jpg?v=2" alt="Cámara domo IP instalada por Maxivision" width="780" height="975" />
+          <figcaption>Domo IP · visión nocturna</figcaption>
+        </div>
+      </figure>
     </div>
 
     <div class="hero-scroll-hint" aria-hidden="true">
@@ -221,7 +237,6 @@
         <h2 class="section-title">Proyectos <span class="text-gradient">web</span></h2>
         <p class="section-sub">Algunos sitios que diseñamos y desarrollamos para nuestros clientes.</p>
       </div>
-
       <div class="portfolio-grid">
         <a class="project-card reveal" href="https://acqua.capital/" target="_blank" rel="noopener">
           <div class="browser-frame">
