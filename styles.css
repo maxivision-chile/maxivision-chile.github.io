@@ -410,7 +410,7 @@ ul   { list-style: none; }
 .client-sector { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); border-top: 1px solid var(--silver-lt); padding-top: .75rem; width: 100%; text-align: center; }
 
 /* ══ PROYECTOS / PORTAFOLIO ══ */
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.75rem; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
 .project-card {
   display: flex; flex-direction: column; color: var(--text);
   background: #fff; border: 1px solid rgba(27,68,114,.1); border-radius: var(--radius-lg); overflow: hidden;
@@ -529,6 +529,7 @@ ul   { list-style: none; }
 @media (max-width: 768px) {
   .nav-links, .btn-nav { display: none; }
   .nav-burger { display: flex; }
+  .portfolio-grid { grid-template-columns: 1fr; }
   .section    { padding-block: 5rem; }
   .hero-content { padding-top: calc(72px + 4rem); }
   .contact-cards { flex-direction: column; align-items: center; }
